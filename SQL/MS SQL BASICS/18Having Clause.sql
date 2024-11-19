@@ -10,4 +10,5 @@ SELECT DISTINCT
 FROM
     sales
 GROUP BY ProductID
-having sum(TotalAmount) < 700 and sum(Quantity)=21;
+having sum(TotalAmount) < 700 or sum(Quantity)=21
+order by ProductID desc;
